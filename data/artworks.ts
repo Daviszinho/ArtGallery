@@ -17,7 +17,7 @@ export const artworks: Artwork[] = [
   {
     id: '1',
     title: 'Abstracto I',
-    artist: 'Davis Pe&nacute;aranda',
+    artist: 'Davis Peñaranda',
     category: 'Tecnica Mixta',
     imageUrl: '/images/abstracto1.jpg',
     description: 'Composición abstracta explorando formas y texturas complejas.',
@@ -28,7 +28,7 @@ export const artworks: Artwork[] = [
   {
     id: '2',
     title: 'Abstracto II',
-    artist: 'Davis Pe&nacute;aranda',
+    artist: 'Davis Peñaranda',
     category: 'Tecnica Mixta',
     imageUrl: '/images/abstracto2.jpg',
     description: 'Segunda obra de la serie abstracta, enfocada en el contraste dinámico.',
@@ -39,7 +39,7 @@ export const artworks: Artwork[] = [
   {
     id: '3',
     title: 'Abstracto III',
-    artist: 'Davis Pe&nacute;aranda',
+    artist: 'Davis Peñaranda',
     category: 'Tecnica Mixta',
     imageUrl: '/images/abstracto3.jpg',
     description: 'Evolución cromática en la serie abstracta, con tonos vibrantes.',
@@ -50,7 +50,7 @@ export const artworks: Artwork[] = [
   {
     id: '4',
     title: 'Abstracto IV',
-    artist: 'Davis Pe&nacute;aranda',
+    artist: 'Davis Peñaranda',
     category: 'Tecnica Mixta',
     imageUrl: '/images/abstracto4.jpg',
     description: 'Culminación de la serie con una expresión minimalista y potente.',
@@ -61,7 +61,7 @@ export const artworks: Artwork[] = [
   {
     id: '5',
     title: 'Acuarela',
-    artist: 'Davis Pe&nacute;aranda',
+    artist: 'Davis Peñaranda',
     category: 'Acuarela',
     imageUrl: '/images/acuarela.jpg',
     description: 'Obra suave y etérea realizada con técnica de acuarela tradicional.',
@@ -72,7 +72,7 @@ export const artworks: Artwork[] = [
   {
     id: '6',
     title: 'Aficiones',
-    artist: 'Davis Pe&nacute;aranda',
+    artist: 'Davis Peñaranda',
     category: 'Oleo',
     imageUrl: '/images/aficiones.jpg',
     description: 'Representación al óleo de pasiones y pasatiempos personales.',
@@ -83,7 +83,7 @@ export const artworks: Artwork[] = [
   {
     id: '7',
     title: 'Africa',
-    artist: 'Davis Pe&nacute;aranda',
+    artist: 'Davis Peñaranda',
     category: 'Oleo',
     imageUrl: '/images/africa.jpg',
     description: 'Homenaje a los paisajes y colores cálidos del continente africano.',
@@ -94,7 +94,7 @@ export const artworks: Artwork[] = [
   {
     id: '8',
     title: 'Flores',
-    artist: 'Davis Pe&nacute;aranda',
+    artist: 'Davis Peñaranda',
     category: 'Acrilico',
     imageUrl: '/images/flores.jpg',
     description: 'Bodegón floral moderno con colores acrílicos intensos.',
@@ -105,7 +105,7 @@ export const artworks: Artwork[] = [
   {
     id: '9',
     title: 'Hongos',
-    artist: 'Davis Pe&nacute;aranda',
+    artist: 'Davis Peñaranda',
     category: 'Acuarela',
     imageUrl: '/images/hongos.jpg',
     description: 'Estudio botánico detallado de hongos silvestres.',
@@ -116,7 +116,7 @@ export const artworks: Artwork[] = [
   {
     id: '10',
     title: 'Noche',
-    artist: 'Davis Pe&nacute;aranda',
+    artist: 'Davis Peñaranda',
     category: 'Oleo',
     imageUrl: '/images/noche.jpg',
     description: 'Paisaje nocturno que captura la quietud y el misterio de la oscuridad.',
@@ -127,7 +127,7 @@ export const artworks: Artwork[] = [
   {
     id: '11',
     title: 'Noche II',
-    artist: 'Davis Pe&nacute;aranda',
+    artist: 'Davis Peñaranda',
     category: 'Oleo',
     imageUrl: '/images/noche2.jpg',
     description: 'Continuación del estudio nocturno, enfocándose en la luz de luna.',
@@ -138,7 +138,7 @@ export const artworks: Artwork[] = [
   {
     id: '12',
     title: 'Paisaje Cubista',
-    artist: 'Davis Pe&nacute;aranda',
+    artist: 'Davis Peñaranda',
     category: 'Acrilico',
     imageUrl: '/images/paisajecubista.jpg',
     description: 'Reinterpretación moderna del paisaje a través de formas geométricas.',
