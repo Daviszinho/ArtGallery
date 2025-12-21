@@ -22,11 +22,11 @@ interface Translations {
 const translations: Record<Language, Translations> = {
     en: {
         header: {
-            title: "Davis Penaranda Gallery",
-            subtitle: "Explore the unique collection of Davis Penaranda, featuring works in oil, acrylic, watercolor, and mixed media."
+            title: "Davis Pe&nacute;aranda Gallery",
+            subtitle: "Explore the unique collection of Davis Pe&nacute;aranda, featuring works in oil, acrylic, watercolor, and mixed media."
         },
         footer: {
-            copyright: "Davis Penaranda. All rights reserved.",
+            copyright: "Davis Pe&nacute;aranda. All rights reserved.",
             selectLanguage: "Select Language"
         },
         status: {
@@ -36,11 +36,11 @@ const translations: Record<Language, Translations> = {
     },
     es: {
         header: {
-            title: "Galería de Davis Penaranda",
-            subtitle: "Explore la colección única de Davis Penaranda, con obras en óleo, acrílico, acuarela y técnica mixta."
+            title: "Galería de Davis Pe&nacute;aranda",
+            subtitle: "Explore la colección única de Davis Pe&nacute;aranda, con obras en óleo, acrílico, acuarela y técnica mixta."
         },
         footer: {
-            copyright: "Davis Penaranda. Todos los derechos reservados.",
+            copyright: "Davis Pe&nacute;aranda. Todos los derechos reservados.",
             selectLanguage: "Seleccionar Idioma"
         },
         status: {
@@ -50,11 +50,11 @@ const translations: Record<Language, Translations> = {
     },
     pt: {
         header: {
-            title: "Galeria Davis Penaranda",
-            subtitle: "Explore a coleção única de Davis Penaranda, com obras em óleo, acrílico, aquarela e técnica mista."
+            title: "Galeria Davis Pe&nacute;aranda",
+            subtitle: "Explore a coleção única de Davis Pe&nacute;aranda, com obras em óleo, acrílico, aquarela e técnica mista."
         },
         footer: {
-            copyright: "Davis Penaranda. Todos os direitos reservados.",
+            copyright: "Davis Pe&nacute;aranda. Todos os direitos reservados.",
             selectLanguage: "Selecionar Idioma"
         },
         status: {

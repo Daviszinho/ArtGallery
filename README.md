@@ -1,12 +1,12 @@
-# Davis Penaranda Art Gallery
+# Davis Pe&nacute;aranda Art Gallery
 
-A modern, responsive digital art gallery showcasing the unique collection of **Davis Penaranda**. This project features a curated selection of artworks across various techniques including Oil, Acrylic, Watercolor, and Mixed Media.
+A modern, responsive digital art gallery showcasing the unique collection of **Davis Pe&nacute;aranda**. This project features a curated selection of artworks across various techniques including Oil, Acrylic, Watercolor, and Mixed Media.
 
 **🚀 Live Demo:** [https://daviszinhoartgallery.vercel.app/](https://daviszinhoartgallery.vercel.app/)
 
 ## 🎨 Features
 
-- **Artist Showcase**: Exclusive focus on the works of Davis Penaranda.
+- **Artist Showcase**: Exclusive focus on the works of Davis Pe&nacute;aranda.
 - **Categorized Viewing**: Filter artworks by technique (Oleo, Acrilico, Acuarela, Tecnica Mixta).
 - **Internationalization (i18n)**:
   - Full support for **English**, **Spanish**, and **Portuguese**.
@@ -48,4 +48,4 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 
 ## 📄 License
 
-This project is proprietary. All artwork images and content are copyright **Davis Penaranda**.
+This project is proprietary. All artwork images and content are copyright **Davis Pe&nacute;aranda**.

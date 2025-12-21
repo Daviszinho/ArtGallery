@@ -23,7 +23,6 @@ export default function ArtworkCard({ artwork }: ArtworkCardProps) {
                 </div>
                 <div className="p-4">
                     <h3 className="text-lg font-bold text-gray-900 dark:text-white truncate">{artwork.title}</h3>
-                    <p className="text-sm text-gray-600 dark:text-gray-300">{artwork.artist}</p>
                     <span className="mt-2 inline-block rounded-full bg-gray-100 px-2 py-1 text-xs font-medium text-gray-600 dark:bg-gray-700 dark:text-gray-300">
                         {artwork.category}
                     </span>
