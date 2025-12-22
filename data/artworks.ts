@@ -247,7 +247,7 @@ export const artworks: Artwork[] = [
       de: 'Die Essenz eines Bootes, das pausiert, um Ruhe und Gelassenheit einzufangen.'
     },
     year: 2022,
-    dimensions: { height: 70, width: 100 },
+    dimensions: { height: 60, width: 40 },
     status: 'sold',
   },
   {
