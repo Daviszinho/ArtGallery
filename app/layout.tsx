@@ -14,7 +14,30 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: "Davis Peñaranda Art Gallery",
-  description: "Davis Peñaranda Art Gallery",
+  description: "Explore the unique collection of Davis Peñaranda, featuring works in oil, acrylic, watercolor, and mixed media.",
+  category: "Art",
+  openGraph: {
+    title: "Davis Peñaranda Art Gallery",
+    description: "Explore the unique collection of Davis Peñaranda, featuring works in oil, acrylic, watercolor, and mixed media.",
+    url: "https://davispenaranda.com", // Placeholder URL, update if known
+    siteName: "Davis Peñaranda Art Gallery",
+    locale: "en_US",
+    type: "website",
+    images: [
+      {
+        url: "/images/og-image.jpg", // Ensure this image exists or is a valid placeholder path
+        width: 1200,
+        height: 630,
+        alt: "Davis Peñaranda Art Gallery",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Davis Peñaranda Art Gallery",
+    description: "Explore the unique collection of Davis Peñaranda, featuring works in oil, acrylic, watercolor, and mixed media.",
+    images: ["/images/og-image.jpg"], // Same or different image for Twitter
+  },
 };
 
 import { LanguageProvider } from "../context/LanguageContext";
