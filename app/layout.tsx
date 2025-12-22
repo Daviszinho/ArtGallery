@@ -19,7 +19,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Davis Peñaranda Art Gallery",
     description: "Explore the unique collection of Davis Peñaranda, featuring works in oil, acrylic, watercolor, and mixed media.",
-    url: "https://davispenaranda.com", // Placeholder URL, update if known
+    url: "https://daviszinhoartgallery.vercel.app/", // Placeholder URL, update if known
     siteName: "Davis Peñaranda Art Gallery",
     locale: "en_US",
     type: "website",
@@ -36,7 +36,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Davis Peñaranda Art Gallery",
     description: "Explore the unique collection of Davis Peñaranda, featuring works in oil, acrylic, watercolor, and mixed media.",
-    images: ["/images/og-image.jpg"], // Same or different image for Twitter
+    images: ["/images/abstracto2.jpg"], // Same or different image for Twitter
   },
 };
 
