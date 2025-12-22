@@ -337,7 +337,7 @@ export const artworks: Artwork[] = [
       en: 'Artistic interpretation of the dark side of the moon.'
     },
     year: 2023,
-    dimensions: { height: 70, width: 100 },
+    dimensions: { height: 50, width: 50 },
     status: 'sold',
   },
   {
@@ -355,7 +355,7 @@ export const artworks: Artwork[] = [
       de: 'Interpretation artistisch des dunklen Seitenes der Mond.',
     },
     year: 2024,
-    dimensions: { height: 70, width: 100 },
+    dimensions: { height: 50, width: 50 },
     status: 'sold',
   },
   {
@@ -373,7 +373,7 @@ export const artworks: Artwork[] = [
       de: 'Interpretation artistisch der Mond.'
     },
     year: 2024,
-    dimensions: { height: 70, width: 100 },
+    dimensions: { height: 50, width: 50 },
     status: 'sold',
   }
 
