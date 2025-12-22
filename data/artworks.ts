@@ -321,6 +321,60 @@ export const artworks: Artwork[] = [
     year: 2025,
     dimensions: { height: 70, width: 100 },
     status: 'sold',
+  },
+  {
+    id: '18',
+    title: 'Lado oscuro de la luna',
+    artist: 'Davis Peñaranda',
+    category: 'Tecnica Mixta',
+    imageUrl: '/images/luna1.jpg',
+    description: {
+      es: 'Interpretacion artistica del lado oscuro de la luna.',
+      pt: 'Interpretacao artistica do lado oscuro da lua.',
+      fr: 'Interpretation artistique du côté sombre de la lune.',
+      it: 'Interpretazione artistica del lato scuro della luna.',
+      de: 'Interpretation artistisch des dunklen Seitenes der Mond.',
+      en: 'Artistic interpretation of the dark side of the moon.'
+    },
+    year: 2023,
+    dimensions: { height: 70, width: 100 },
+    status: 'sold',
+  },
+  {
+    id: '19',
+    title: 'Lado oscuro de la luna roja',
+    artist: 'Davis Peñaranda',
+    category: 'Tecnica Mixta',
+    imageUrl: '/images/luna2.jpg',
+    description: {
+      en: 'Artistic interpretation of the dark side of the moon.',
+      es: 'Interpretacion artistica del lado oscuro de la luna con veladuras rojas.',
+      pt: 'Interpretacao artistica do lado oscuro da lua.',
+      fr: 'Interpretation artistique du côté sombre de la lune.',
+      it: 'Interpretazione artistica del lato scuro della luna.',
+      de: 'Interpretation artistisch des dunklen Seitenes der Mond.',
+    },
+    year: 2024,
+    dimensions: { height: 70, width: 100 },
+    status: 'sold',
+  },
+  {
+    id: '20',
+    title: 'Luna',
+    artist: 'Davis Peñaranda',
+    category: 'Tecnica Mixta',
+    imageUrl: '/images/luna3.jpg',
+    description: {
+      en: 'Artistic interpretation of the moon.',
+      es: 'Interpretacion artistica de la luna.',
+      pt: 'Interpretacao artistica da lua.',
+      fr: 'Interpretation artistique de la lune.',
+      it: 'Interpretazione artistica della luna.',
+      de: 'Interpretation artistisch der Mond.'
+    },
+    year: 2024,
+    dimensions: { height: 70, width: 100 },
+    status: 'sold',
   }
 
 ];
