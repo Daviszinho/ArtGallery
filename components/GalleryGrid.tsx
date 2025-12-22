@@ -4,20 +4,33 @@ import { useState, useMemo } from 'react';
 import { Artwork } from '../data/artworks';
 import ArtworkCard from './ArtworkCard';
 import Filter from './Filter';
+import { useLanguage } from '../context/LanguageContext';
 
 interface GalleryGridProps {
     artworks: Artwork[];
 }
 
 export default function GalleryGrid({ artworks }: GalleryGridProps) {
+    const { t } = useLanguage();
     const [activeCategory, setActiveCategory] = useState('All');
 
     const categories = useMemo(() => {
         const allCategories = artworks.map((artwork) => artwork.category);
-        return ['All', ...Array.from(new Set(allCategories))];
-    }, [artworks]);
+        const uniqueCategories = ['All', ...Array.from(new Set(allCategories))];
 
-    const [sortOption, setSortOption] = useState<'featured'|'year-desc'|'year-asc'|'title-asc'|'title-desc'>('featured');
+        return uniqueCategories.map(cat => {
+            let label = cat;
+            if (cat === 'All') label = t.gallery.filters.all;
+            else if (cat === 'Oleo') label = t.gallery.filters.oleo;
+            else if (cat === 'Acrilico') label = t.gallery.filters.acrilico;
+            else if (cat === 'Acuarela') label = t.gallery.filters.acuarela;
+            else if (cat === 'Tecnica Mixta') label = t.gallery.filters.tecnicaMixta;
+
+            return { id: cat, label };
+        });
+    }, [artworks, t]);
+
+    const [sortOption, setSortOption] = useState<'featured' | 'year-desc' | 'year-asc' | 'title-asc' | 'title-desc'>('featured');
 
     const filteredArtworks = useMemo(() => {
         if (activeCategory === 'All') {
@@ -29,12 +42,11 @@ export default function GalleryGrid({ artworks }: GalleryGridProps) {
     const sortedArtworks = useMemo(() => {
         const arr = [...filteredArtworks];
         arr.sort((a, b) => {
-            // Priorizar elementos con status 'available'
+            // Prioritize available
             const availA = a.status === 'available';
             const availB = b.status === 'available';
             if (availA !== availB) return availA ? -1 : 1;
 
-            // Luego aplicar el criterio de orden seleccionado
             switch (sortOption) {
                 case 'year-desc':
                     return b.year - a.year;
@@ -46,7 +58,6 @@ export default function GalleryGrid({ artworks }: GalleryGridProps) {
                     return b.title.localeCompare(a.title);
                 case 'featured':
                 default:
-                    // Featured: por año descendente
                     return b.year - a.year;
             }
         });
@@ -62,18 +73,18 @@ export default function GalleryGrid({ artworks }: GalleryGridProps) {
             />
 
             <div className="flex justify-end mb-4">
-                <label htmlFor="sort" className="sr-only">Sort</label>
+                <label htmlFor="sort" className="sr-only">{t.gallery.sort.label}</label>
                 <select
                     id="sort"
                     value={sortOption}
                     onChange={(e) => setSortOption(e.target.value as any)}
                     className="bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-700 text-sm rounded-md p-2"
                 >
-                    <option value="featured">Featured</option>
-                    <option value="year-desc">Year: Newest</option>
-                    <option value="year-asc">Year: Oldest</option>
-                    <option value="title-asc">Title: A–Z</option>
-                    <option value="title-desc">Title: Z–A</option>
+                    <option value="featured">{t.gallery.sort.featured}</option>
+                    <option value="year-desc">{t.gallery.sort.yearDesc}</option>
+                    <option value="year-asc">{t.gallery.sort.yearAsc}</option>
+                    <option value="title-asc">{t.gallery.sort.titleAsc}</option>
+                    <option value="title-desc">{t.gallery.sort.titleDesc}</option>
                 </select>
             </div>
 
