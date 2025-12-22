@@ -146,6 +146,63 @@ export const artworks: Artwork[] = [
     dimensions: { height: 70, width: 100 },
     status: 'sold',
   },
+
+  {
+    id: '13',
+    title: 'Barco',
+    artist: 'Davis Peñaranda',
+    category: 'Tecnica Mixta',
+    imageUrl: '/images/barco.jpg',
+    description: 'La esencia de un barco en pausa para capturar la calma y la serenidad.',
+    year: 2022,
+    dimensions: { height: 70, width: 100 },
+    status: 'sold',
+  },
+  {
+    id: '14',
+    title: 'Dots 1',
+    artist: 'Davis Peñaranda',
+    category: 'Acrilico',
+    imageUrl: '/images/dots1.jpg',
+    description: 'Exploración del color a través de puntos.',
+    year: 2024,
+    dimensions: { height: 70, width: 100 },
+    status: 'available',
+  },
+  {
+    id: '15',
+    title: 'Dots 2',
+    artist: 'Davis Peñaranda',
+    category: 'Acrilico',
+    imageUrl: '/images/dots2.jpg',
+    description: 'Exploración del color, contraste y armonía a través de puntos.',
+    year: 2024,
+    dimensions: { height: 70, width: 100 },
+    status: 'available',
+  },
+  {
+    id: '16',
+    title: 'Flores amarillas',
+    artist: 'Davis Peñaranda',
+    category: 'Acrilico',
+    imageUrl: '/images/floresamarillas.jpg',
+    description: 'Arbol de corteza amarilla.',
+    year: 2020,
+    dimensions: { height: 70, width: 100 },
+    status: 'available',
+  },
+  {
+    id: '17',
+    title: 'Noche y luna',
+    artist: 'Davis Peñaranda',
+    category: 'Tecnica Mixta',
+    imageUrl: '/images/noche3.jpg',
+    description: 'Exploracion de la noche y la luna a través de la tecnica mixta con colores brillantes .',
+    year: 2025,
+    dimensions: { height: 70, width: 100 },
+    status: 'sold',
+  }
+
 ];
 
 
