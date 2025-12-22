@@ -17,12 +17,41 @@ export default function GalleryGrid({ artworks }: GalleryGridProps) {
         return ['All', ...Array.from(new Set(allCategories))];
     }, [artworks]);
 
+    const [sortOption, setSortOption] = useState<'featured'|'year-desc'|'year-asc'|'title-asc'|'title-desc'>('featured');
+
     const filteredArtworks = useMemo(() => {
         if (activeCategory === 'All') {
             return artworks;
         }
         return artworks.filter((artwork) => artwork.category === activeCategory);
     }, [activeCategory, artworks]);
+
+    const sortedArtworks = useMemo(() => {
+        const arr = [...filteredArtworks];
+        arr.sort((a, b) => {
+            // Priorizar elementos con status 'available'
+            const availA = a.status === 'available';
+            const availB = b.status === 'available';
+            if (availA !== availB) return availA ? -1 : 1;
+
+            // Luego aplicar el criterio de orden seleccionado
+            switch (sortOption) {
+                case 'year-desc':
+                    return b.year - a.year;
+                case 'year-asc':
+                    return a.year - b.year;
+                case 'title-asc':
+                    return a.title.localeCompare(b.title);
+                case 'title-desc':
+                    return b.title.localeCompare(a.title);
+                case 'featured':
+                default:
+                    // Featured: por año descendente
+                    return b.year - a.year;
+            }
+        });
+        return arr;
+    }, [filteredArtworks, sortOption]);
 
     return (
         <div className="container mx-auto px-4 py-8">
@@ -32,13 +61,29 @@ export default function GalleryGrid({ artworks }: GalleryGridProps) {
                 onSelectCategory={setActiveCategory}
             />
 
+            <div className="flex justify-end mb-4">
+                <label htmlFor="sort" className="sr-only">Sort</label>
+                <select
+                    id="sort"
+                    value={sortOption}
+                    onChange={(e) => setSortOption(e.target.value as any)}
+                    className="bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-700 text-sm rounded-md p-2"
+                >
+                    <option value="featured">Featured</option>
+                    <option value="year-desc">Year: Newest</option>
+                    <option value="year-asc">Year: Oldest</option>
+                    <option value="title-asc">Title: A–Z</option>
+                    <option value="title-desc">Title: Z–A</option>
+                </select>
+            </div>
+
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
-                {filteredArtworks.map((artwork) => (
+                {sortedArtworks.map((artwork) => (
                     <ArtworkCard key={artwork.id} artwork={artwork} />
                 ))}
             </div>
 
-            {filteredArtworks.length === 0 && (
+            {sortedArtworks.length === 0 && (
                 <div className="text-center py-12">
                     <p className="text-gray-500 dark:text-gray-400 text-lg">No artworks found in this category.</p>
                 </div>
