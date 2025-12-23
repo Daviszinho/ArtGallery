@@ -377,6 +377,44 @@ export const artworks: Artwork[] = [
     status: 'sold',
   }
 
+  ,
+  {
+    id: '21',
+    title: 'Dots 3',
+    artist: 'Davis Peñaranda',
+    category: 'Acrilico',
+    imageUrl: '/images/dots3.jpg',
+    description: {
+      en: 'Exploration of color, contrast and harmony through dots.',
+      es: 'Exploracion del color, contraste y armonia a través de puntos.',
+      pt: 'Exploração da cor, contraste e harmonia através de pontos.',
+      fr: 'Exploration de la couleur, du contraste et de l\'harmonie à travers des points.',
+      it: 'Esplorazione del colore, contrasto e armonia attraverso i punti.',
+      de: 'Erforschung von Farbe, Kontrast und Harmonie durch Punkte.'
+    },
+    year: 2024,
+    dimensions: { height: 40, width: 50 },
+    status: 'sold',
+  }
+  ,
+  {
+    id: '22',
+    title: 'Relieve de helechos amarillos',
+    artist: 'Davis Peñaranda',
+    category: 'Oleo',
+    imageUrl: '/images/relieve1.jpg',
+    description: {
+      en: 'Exploration of the relief through oil on canvas.',
+      es: 'Exploracion del relieve a traves del oleo sobre tela.',
+      pt: 'Exploração do relieve a traves do oleo sobre tela.',
+      fr: 'Exploration du relief a travers l\'huile sur toile.',
+      it: 'Esplorazione del relievo attraverso l\'olio su tela.',
+      de: 'Erforschung des Reliefs durch Öl auf Leinwand.'
+    },
+    year: 2024,
+    dimensions: { height: 50, width: 50 },
+    status: 'sold',
+  }
 ];
 
 
