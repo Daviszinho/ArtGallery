@@ -1,18 +1,22 @@
 'use client';
 
-import { useState, useMemo } from 'react';
+import { useState, useMemo, useEffect, lazy, Suspense } from 'react';
 import { Artwork } from '../data/artworks';
-import ArtworkCard from './ArtworkCard';
-import Filter from './Filter';
 import { useLanguage } from '../context/LanguageContext';
+
+const ArtworkCard = lazy(() => import('./ArtworkCard'));
+const Filter = lazy(() => import('./Filter'));
 
 interface GalleryGridProps {
     artworks: Artwork[];
 }
 
+const ITEMS_PER_PAGE = 12;
+
 export default function GalleryGrid({ artworks }: GalleryGridProps) {
     const { t } = useLanguage();
     const [activeCategory, setActiveCategory] = useState('All');
+    const [visibleCount, setVisibleCount] = useState(ITEMS_PER_PAGE);
 
     const categories = useMemo(() => {
         const allCategories = artworks.map((artwork) => artwork.category);
@@ -39,6 +43,11 @@ export default function GalleryGrid({ artworks }: GalleryGridProps) {
         return artworks.filter((artwork) => artwork.category === activeCategory);
     }, [activeCategory, artworks]);
 
+    // Reset visible count when category changes
+    useEffect(() => {
+        setVisibleCount(ITEMS_PER_PAGE);
+    }, [activeCategory]);
+
     const sortedArtworks = useMemo(() => {
         const arr = [...filteredArtworks];
         arr.sort((a, b) => {
@@ -64,13 +73,21 @@ export default function GalleryGrid({ artworks }: GalleryGridProps) {
         return arr;
     }, [filteredArtworks, sortOption]);
 
+    const visibleArtworks = sortedArtworks.slice(0, visibleCount);
+
+    const handleLoadMore = () => {
+        setVisibleCount(prev => prev + ITEMS_PER_PAGE);
+    };
+
     return (
         <div className="container mx-auto px-4 py-8">
-            <Filter
-                categories={categories}
-                activeCategory={activeCategory}
-                onSelectCategory={setActiveCategory}
-            />
+            <Suspense fallback={<div className="h-12 bg-gray-200 dark:bg-gray-700 rounded animate-pulse mb-4" />}>
+                <Filter
+                    categories={categories}
+                    activeCategory={activeCategory}
+                    onSelectCategory={setActiveCategory}
+                />
+            </Suspense>
 
             <div className="flex justify-end mb-4">
                 <label htmlFor="sort" className="sr-only">{t.gallery.sort.label}</label>
@@ -89,10 +106,23 @@ export default function GalleryGrid({ artworks }: GalleryGridProps) {
             </div>
 
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
-                {sortedArtworks.map((artwork) => (
-                    <ArtworkCard key={artwork.id} artwork={artwork} />
+                {visibleArtworks.map((artwork) => (
+                    <Suspense key={artwork.id} fallback={<div className="aspect-[4/3] bg-gray-200 dark:bg-gray-700 rounded-lg animate-pulse" />}>
+                        <ArtworkCard artwork={artwork} />
+                    </Suspense>
                 ))}
             </div>
+
+            {visibleCount < sortedArtworks.length && (
+                <div className="text-center mt-8">
+                    <button
+                        onClick={handleLoadMore}
+                        className="bg-blue-600 hover:bg-blue-700 text-white font-medium py-2 px-6 rounded-lg transition-colors"
+                    >
+                        {t.gallery.loadMore}
+                    </button>
+                </div>
+            )}
 
             {sortedArtworks.length === 0 && (
                 <div className="text-center py-12">

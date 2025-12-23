@@ -33,6 +33,7 @@ interface Translations {
             titleAsc: string;
             titleDesc: string;
         };
+        loadMore: string;
     };
     detail: {
         back: string;
@@ -72,7 +73,8 @@ const translations: Record<Language, Translations> = {
                 yearAsc: "Year: Oldest",
                 titleAsc: "Title: A–Z",
                 titleDesc: "Title: Z–A"
-            }
+            },
+            loadMore: "Load More"
         },
         detail: {
             back: "Back to Gallery",
@@ -110,7 +112,8 @@ const translations: Record<Language, Translations> = {
                 yearAsc: "Año: Más antiguo",
                 titleAsc: "Título: A–Z",
                 titleDesc: "Título: Z–A"
-            }
+            },
+            loadMore: "Cargar Más"
         },
         detail: {
             back: "Volver a la Galería",
@@ -148,7 +151,8 @@ const translations: Record<Language, Translations> = {
                 yearAsc: "Ano: Mais antigo",
                 titleAsc: "Título: A–Z",
                 titleDesc: "Título: Z–A"
-            }
+            },
+            loadMore: "Carregar Mais"
         },
         detail: {
             back: "Voltar para Galeria",
@@ -186,7 +190,8 @@ const translations: Record<Language, Translations> = {
                 yearAsc: "Année : Plus ancien",
                 titleAsc: "Titre : A–Z",
                 titleDesc: "Titre : Z–A"
-            }
+            },
+            loadMore: "Charger Plus"
         },
         detail: {
             back: "Retour à la galerie",
@@ -224,7 +229,8 @@ const translations: Record<Language, Translations> = {
                 yearAsc: "Anno: Più vecchio",
                 titleAsc: "Titolo: A–Z",
                 titleDesc: "Titolo: Z–A"
-            }
+            },
+            loadMore: "Carica Altro"
         },
         detail: {
             back: "Torna alla galleria",
@@ -262,7 +268,8 @@ const translations: Record<Language, Translations> = {
                 yearAsc: "Jahr: Älteste",
                 titleAsc: "Titel: A–Z",
                 titleDesc: "Titel: Z–A"
-            }
+            },
+            loadMore: "Mehr Laden"
         },
         detail: {
             back: "Zurück zur Galerie",

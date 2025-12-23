@@ -1,11 +1,35 @@
 "use client";
 
+import { useState, useEffect } from 'react';
 import GalleryGrid from '../components/GalleryGrid';
 import { artworks } from '../data/artworks';
 import { useLanguage } from '../context/LanguageContext';
 
 export default function Home() {
   const { t } = useLanguage();
+  const [loadedArtworks, setLoadedArtworks] = useState<typeof artworks>([]);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    // Simulate deferred loading
+    const timer = setTimeout(() => {
+      setLoadedArtworks(artworks);
+      setLoading(false);
+    }, 100); // Small delay to demonstrate
+
+    return () => clearTimeout(timer);
+  }, []);
+
+  if (loading) {
+    return (
+      <main className="min-h-screen bg-gray-50 dark:bg-gray-900 flex items-center justify-center">
+        <div className="text-center">
+          <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-blue-600 mx-auto mb-4"></div>
+          <p className="text-gray-600 dark:text-gray-400">Loading gallery...</p>
+        </div>
+      </main>
+    );
+  }
 
   return (
     <main className="min-h-screen bg-gray-50 dark:bg-gray-900">
@@ -19,7 +43,7 @@ export default function Home() {
           </p>
         </header>
 
-        <GalleryGrid artworks={artworks} />
+        <GalleryGrid artworks={loadedArtworks} />
       </div>
     </main>
   );
