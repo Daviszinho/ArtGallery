@@ -411,8 +411,8 @@ export const artworks: Artwork[] = [
       it: 'Esplorazione del relievo attraverso l\'olio su tela.',
       de: 'Erforschung des Reliefs durch Öl auf Leinwand.'
     },
-    year: 2024,
-    dimensions: { height: 50, width: 50 },
+    year: 2023,
+    dimensions: { height: 60, width: 60 },
     status: 'sold',
   }
 ];
