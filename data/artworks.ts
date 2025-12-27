@@ -437,7 +437,7 @@ export const artworks: Artwork[] = [
     id: '24',
     title: 'Abstracto acrilico',
     artist: 'Davis Peñaranda',
-    category: 'Oleo',
+    category: 'Acrilico',
     imageUrl: '/images/abstractoacrilico.jpg',
     description: {
       en: 'Search for an abstract fluid with blue and red whites through dripping.',
@@ -450,6 +450,23 @@ export const artworks: Artwork[] = [
     year: 2023,
     dimensions: { height: 60, width: 70 },
     status: 'sold',
+  }, {
+    id: '25',
+    title: 'Abstracto V',
+    artist: 'Davis Peñaranda',
+    category: 'Acrilico',
+    imageUrl: '/images/abstracto5.jpg',
+    description: {
+      es: 'Busqueda de un fluido abstracto con dorados, azules y rojos a través del dripping.',
+      en: 'Search for an abstract fluid with blue and red whites through dripping.',
+      pt: 'Busca de um fluido abstracto com brancos azuis e vermelhos a través do dripping.',
+      fr: 'Recherche d\'un fluide abstrait avec blancs bleus et rouges à travers le dripping.',
+      it: 'Ricerca di un fluido astratto con bianchi blu e rossi attraverso il dripping.',
+      de: 'Suche nach einem abstrakten Fluid mit blauen und roten Weißes durch dripping.'
+    },
+    year: 2022,
+    dimensions: { height: 20, width: 30 },
+    status: 'available',
   }
 ];
 
