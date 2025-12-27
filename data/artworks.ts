@@ -404,7 +404,7 @@ export const artworks: Artwork[] = [
     category: 'Oleo',
     imageUrl: '/images/relieve1.jpg',
     description: {
-      en: 'Exploration of the relief through oil on canvas.',
+      en: 'Exploration of the relief through oil on canvas',
       es: 'Exploracion del relieve a traves del oleo sobre tela.',
       pt: 'Exploração do relieve a traves do oleo sobre tela.',
       fr: 'Exploration du relief a travers l\'huile sur toile.',
@@ -413,6 +413,42 @@ export const artworks: Artwork[] = [
     },
     year: 2023,
     dimensions: { height: 60, width: 60 },
+    status: 'sold',
+  },
+  {
+    id: '23',
+    title: 'Geometria',
+    artist: 'Davis Peñaranda',
+    category: 'Oleo',
+    imageUrl: '/images/geometria.jpg',
+    description: {
+      en: 'Use of multicolored triangles to create a geometry effect.',
+      es: 'Uso de triangulos multicolores para crear un efecto de geometria.',
+      pt: 'Uso de triangulos multicolores para criar um efeito de geometria.',
+      fr: 'Utilisation de triangles multicolores pour créer un effet de géométrie.',
+      it: 'Utilizzo di triangoli multicolori per creare un effetto di geometria.',
+      de: 'Verwendung von Farben und Formen für eine geometrische Gestaltung.'
+    },
+    year: 2020,
+    dimensions: { height: 70, width: 100 },
+    status: 'sold',
+  },
+  {
+    id: '24',
+    title: 'Abstracto acrilico',
+    artist: 'Davis Peñaranda',
+    category: 'Oleo',
+    imageUrl: '/images/abstractoacrilico.jpg',
+    description: {
+      en: 'Search for an abstract fluid with blue and red whites through dripping.',
+      es: 'Busqueda de un fluido abstracto con blancos azules y rojos a través del dripping.',
+      pt: 'Busca de um fluido abstracto com brancos azuis e vermelhos a través do dripping.',
+      fr: 'Recherche d\'un fluide abstrait avec blancs bleus et rouges à travers le dripping.',
+      it: 'Ricerca di un fluido astratto con bianchi blu e rossi attraverso il dripping.',
+      de: 'Suche nach einem abstrakten Fluid mit blauen und roten Weißes durch dripping.'
+    },
+    year: 2023,
+    dimensions: { height: 60, width: 70 },
     status: 'sold',
   }
 ];
