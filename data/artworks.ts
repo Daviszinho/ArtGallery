@@ -484,6 +484,57 @@ export const artworks: Artwork[] = [
     year: 2023,
     dimensions: { height: 60, width: 60 },
     status: 'sold',
+  }, {
+    id: '27',
+    title: 'Jupiter',
+    artist: 'Davis Peñaranda',
+    category: 'Oleo',
+    imageUrl: '/images/jupiter.jpg',
+    description: {
+      es: 'Experiencia amateura del planeta jupiter.',
+      en: 'Amateur experience of the planet Jupiter.',
+      pt: 'Experiencia amateura do planeta jupiter.',
+      fr: 'Experience amateur du planete Jupiter.',
+      it: 'Esperienza amateura del pianeta Giove.',
+      de: 'Experience amateur des Planeten Jupiter.'
+    },
+    year: 2021,
+    dimensions: { height: 60, width: 60 },
+    status: 'sold',
+  }, {
+    id: '28',
+    title: 'Pequeño paisajes cubistas',
+    artist: 'Davis Peñaranda',
+    category: 'Oleo',
+    imageUrl: '/images/paisajecubistamini1.jpg',
+    description: {
+      es: 'Exploracion del estilo cubista a traves de paisajes en dimensiones pequeñas.',
+      en: 'Exploration of the cubist style through small landscapes.',
+      pt: 'Exploração do estilo cubista a traves de paisagens em dimensoes pequenas.',
+      fr: 'Exploration du style cubiste a travers des paysages en dimensions petites.',
+      it: 'Esplorazione dello stile cubista attraverso paesaggi in dimensioni piccole.',
+      de: 'Erforschung des Cubismus durch kleine Landschaften.'
+    },
+    year: 2021,
+    dimensions: { height: 30, width: 30 },
+    status: 'sold',
+  }, {
+    id: '29',
+    title: 'Pequeño paisajes cubistas',
+    artist: 'Davis Peñaranda',
+    category: 'Oleo',
+    imageUrl: '/images/paisajecubistamini1.jpg',
+    description: {
+      es: 'Exploracion del estilo cubista a traves de paisajes en dimensiones pequeñas.',
+      en: 'Exploration of the cubist style through small landscapes.',
+      pt: 'Exploração do estilo cubista a traves de paisagens em dimensoes pequenas.',
+      fr: 'Exploration du style cubiste a travers des paysages en dimensions petites.',
+      it: 'Esplorazione dello stile cubista attraverso paesaggi in dimensioni piccole.',
+      de: 'Erforschung des Cubismus durch kleine Landschaften.'
+    },
+    year: 202,
+    dimensions: { height: 30, width: 30 },
+    status: 'sold',
   }
 ];
 
