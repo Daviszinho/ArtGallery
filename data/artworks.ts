@@ -467,6 +467,23 @@ export const artworks: Artwork[] = [
     year: 2022,
     dimensions: { height: 20, width: 30 },
     status: 'available',
+  }, {
+    id: '26',
+    title: 'Sol Profundo',
+    artist: 'Davis Peñaranda',
+    category: 'Oleo',
+    imageUrl: '/images/solprofundo.jpg',
+    description: {
+      es: 'Interpretacion artistica del sol a traves del color amarillo y diferentes otros matices.',
+      en: 'Artistic interpretation of the sun through the color yellow and different other shades.',
+      pt: 'Interpretacao artistica do sol a traves do color amarelo e diferentes outros matices.',
+      fr: 'Interpretation artistique du soleil a travers le color jaune et differentes autres nuances.',
+      it: 'Interpretazione artistica del sole attraverso il color giallo e diversi altri toni.',
+      de: 'Interpretation artistisch des Sonnens durch das Farbe Gelb und verschiedene andere Töne.'
+    },
+    year: 2023,
+    dimensions: { height: 60, width: 60 },
+    status: 'sold',
   }
 ];
 
