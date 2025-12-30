@@ -503,10 +503,27 @@ export const artworks: Artwork[] = [
     status: 'sold',
   }, {
     id: '28',
-    title: 'Pequeño paisajes cubistas',
+    title: 'Pequeño paisajes cubista 1',
     artist: 'Davis Peñaranda',
     category: 'Oleo',
     imageUrl: '/images/paisajecubistamini1.jpg',
+    description: {
+      es: 'Exploracion del estilo cubista a traves de paisajes en dimensiones pequeñas.',
+      en: 'Exploration of the cubist style through small landscapes.',
+      pt: 'Exploração do estilo cubista a traves de paisagens em dimensoes pequenas.',
+      fr: 'Exploration du style cubiste a travers des paysages en dimensions petites.',
+      it: 'Esplorazione dello stile cubista attraverso paesaggi in dimensioni piccole.',
+      de: 'Erforschung des Cubismus durch kleine Landschaften.'
+    },
+    year: 2021,
+    dimensions: { height: 30, width: 30 },
+    status: 'sold',
+  }, {
+    id: '29',
+    title: 'Pequeño paisajes cubista 2',
+    artist: 'Davis Peñaranda',
+    category: 'Oleo',
+    imageUrl: '/images/paisajecubistamini2.jpg',
     description: {
       es: 'Exploracion del estilo cubista a traves de paisajes en dimensiones pequeñas.',
       en: 'Exploration of the cubist style through small landscapes.',
