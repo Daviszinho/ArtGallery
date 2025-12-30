@@ -1,6 +1,7 @@
 "use client";
 
 import { useLanguage } from '../context/LanguageContext';
+import LanguageSelector from './LanguageSelector';
 
 export default function Footer() {
     const { language, setLanguage, t } = useLanguage();
@@ -14,22 +15,12 @@ export default function Footer() {
                     </p>
 
                     <div className="flex items-center gap-2">
-                        <label htmlFor="language-select" className="text-sm font-medium text-gray-700 dark:text-gray-300">
-                            {t.footer.selectLanguage}:
-                        </label>
-                        <select
-                            id="language-select"
-                            value={language}
-                            onChange={(e) => setLanguage(e.target.value as 'en' | 'es' | 'pt')}
-                            className="bg-gray-50 dark:bg-gray-900 border border-gray-300 dark:border-gray-600 text-gray-900 dark:text-white text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block p-2.5"
-                        >
-                            <option value="en">English</option>
-                            <option value="es">Español</option>
-                            <option value="pt">Português</option>
-                            <option value="fr">Français</option>
-                            <option value="it">Italiano</option>
-                            <option value="de">Deutsch</option>
-                        </select>
+                        <div className="flex items-center gap-3">
+                            <span className="text-sm font-medium text-gray-700 dark:text-gray-300">
+                                {t.footer.selectLanguage}:
+                            </span>
+                            <LanguageSelector />
+                        </div>
                     </div>
                 </div>
             </div>
