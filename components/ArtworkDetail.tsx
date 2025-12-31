@@ -4,6 +4,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { Artwork } from '../data/artworks';
 import StatusBadge from './StatusBadge';
+import ShareButtons from './ShareButtons';
 import { useLanguage } from '../context/LanguageContext';
 
 interface ArtworkDetailProps {
@@ -18,7 +19,7 @@ export default function ArtworkDetail({ artwork }: ArtworkDetailProps) {
             <div className="max-w-7xl mx-auto">
                 <Link
                     href="/"
-                    className="inline-flex items-center text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white mb-8 transition-colors"
+                    className="inline-flex items-center text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white mb-8 transition-all duration-200 hover:translate-x-1 animate-fade-in"
                 >
                     <svg className="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 19l-7-7m0 0l7-7m-7 7h18" />
@@ -26,20 +27,20 @@ export default function ArtworkDetail({ artwork }: ArtworkDetailProps) {
                     {t.detail.back}
                 </Link>
 
-                <div className="bg-white dark:bg-gray-800 rounded-2xl shadow-xl overflow-hidden">
+                <div className="bg-white dark:bg-gray-800 rounded-2xl shadow-xl overflow-hidden animate-scale-in animation-delay-100">
                     <div className="grid grid-cols-1 lg:grid-cols-2 gap-0">
-                        <div className="relative h-[50vh] lg:h-auto w-full bg-gray-100 dark:bg-gray-700">
+                        <div className="relative h-[50vh] lg:h-auto w-full bg-gray-100 dark:bg-gray-700 animate-fade-in animation-delay-200">
                             <Image
                                 src={artwork.imageUrl}
                                 alt={artwork.title}
                                 fill
-                                className="object-contain p-4"
+                                className="object-contain p-4 transition-transform duration-500 hover:scale-105"
                                 priority
                                 sizes="(max-width: 1024px) 100vw, 50vw"
                             />
                         </div>
 
-                        <div className="p-8 lg:p-12 flex flex-col justify-center">
+                        <div className="p-8 lg:p-12 flex flex-col justify-center animate-fade-in-up animation-delay-300">
                             <div className="mb-2">
                                 <span className="inline-block rounded-full bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-200 px-3 py-1 text-sm font-semibold">
                                     {artwork.category}
@@ -50,26 +51,34 @@ export default function ArtworkDetail({ artwork }: ArtworkDetailProps) {
                                 <StatusBadge status={artwork.status} className="ml-2" />
                             </div>
 
-                            <h1 className="text-4xl font-bold text-gray-900 dark:text-white mb-2">
+                            <h1 className="text-4xl md:text-5xl font-serif font-bold text-gray-900 dark:text-white mb-2 tracking-tight">
                                 {artwork.title}
                             </h1>
 
-                            <p className="text-xl text-gray-600 dark:text-gray-300 mb-6">
+                            <p className="text-xl font-sans font-light text-gray-600 dark:text-gray-300 mb-6">
                                 {t.detail.by} {artwork.artist}, {artwork.year}
                             </p>
 
                             <div className="prose dark:prose-invert max-w-none">
-                                <h3 className="text-lg font-semibold mb-2">{t.detail.about}</h3>
-                                <p className="text-gray-600 dark:text-gray-300 leading-relaxed">
+                                <h3 className="text-lg font-serif font-semibold mb-2">{t.detail.about}</h3>
+                                <p className="text-gray-700 dark:text-gray-300 leading-relaxed font-sans">
                                     {artwork.description[language]}
                                 </p>
+                            </div>
+
+                            <div className="mt-6">
+                                <ShareButtons 
+                                    artworkTitle={artwork.title}
+                                    artworkId={artwork.id}
+                                    artworkImage={artwork.imageUrl}
+                                />
                             </div>
 
                             <div className="mt-8 pt-8 border-t border-gray-200 dark:border-gray-700">
                                 {artwork.status === 'available' && (
                                     <a
                                         href={`mailto:davis.penaranda@gmail.com?subject=Solicitud de obra: ${artwork.title}&body=Estoy interesado en la obra '${artwork.title}' de ${artwork.artist}.`}
-                                        className="inline-block w-full sm:w-auto bg-black dark:bg-white text-white dark:text-black px-8 py-3 rounded-lg font-semibold hover:opacity-90 transition-opacity text-center"
+                                        className="inline-block w-full sm:w-auto bg-black dark:bg-white text-white dark:text-black px-8 py-3 rounded-lg font-semibold transition-all duration-300 hover:scale-105 hover:shadow-xl active:scale-95 text-center"
                                     >
                                         {t.detail.inquire}
                                     </a>
