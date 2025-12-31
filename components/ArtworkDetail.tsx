@@ -66,12 +66,14 @@ export default function ArtworkDetail({ artwork }: ArtworkDetailProps) {
                             </div>
 
                             <div className="mt-8 pt-8 border-t border-gray-200 dark:border-gray-700">
-                                <a
-                                    href={`mailto:davis.penaranda@gmail.com?subject=Solicitud de obra: ${artwork.title}&body=Estoy interesado en la obra '${artwork.title}' de ${artwork.artist}.`}
-                                    className="inline-block w-full sm:w-auto bg-black dark:bg-white text-white dark:text-black px-8 py-3 rounded-lg font-semibold hover:opacity-90 transition-opacity text-center"
-                                >
-                                    {t.detail.inquire}
-                                </a>
+                                {artwork.status === 'available' && (
+                                    <a
+                                        href={`mailto:davis.penaranda@gmail.com?subject=Solicitud de obra: ${artwork.title}&body=Estoy interesado en la obra '${artwork.title}' de ${artwork.artist}.`}
+                                        className="inline-block w-full sm:w-auto bg-black dark:bg-white text-white dark:text-black px-8 py-3 rounded-lg font-semibold hover:opacity-90 transition-opacity text-center"
+                                    >
+                                        {t.detail.inquire}
+                                    </a>
+                                )}
                             </div>
                         </div>
                     </div>
