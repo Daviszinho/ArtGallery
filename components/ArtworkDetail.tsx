@@ -5,7 +5,6 @@ import Link from 'next/link';
 import { Artwork } from '../data/artworks';
 import StatusBadge from './StatusBadge';
 import ShareButtons from './ShareButtons';
-import ArtworkSchema from './ArtworkSchema';
 import { useLanguage } from '../context/LanguageContext';
 
 interface ArtworkDetailProps {
@@ -17,7 +16,6 @@ export default function ArtworkDetail({ artwork }: ArtworkDetailProps) {
 
     return (
         <main className="min-h-screen bg-gray-50 dark:bg-gray-900 py-12 px-4 sm:px-6 lg:px-8">
-            <ArtworkSchema artwork={artwork} />
             <div className="max-w-7xl mx-auto">
                 <Link
                     href="/"
