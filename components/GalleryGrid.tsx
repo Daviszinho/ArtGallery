@@ -89,13 +89,13 @@ export default function GalleryGrid({ artworks }: GalleryGridProps) {
                 />
             </Suspense>
 
-            <div className="flex justify-end mb-4 animate-fade-in animation-delay-300">
+            <div className="flex justify-end mb-4">
                 <label htmlFor="sort" className="sr-only">{t.gallery.sort.label}</label>
                 <select
                     id="sort"
                     value={sortOption}
                     onChange={(e) => setSortOption(e.target.value as any)}
-                    className="bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-700 text-sm rounded-md p-2 transition-all duration-200 hover:border-blue-500 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 dark:focus:ring-blue-800"
+                    className="bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-700 text-sm rounded-md p-2"
                 >
                     <option value="featured">{t.gallery.sort.featured}</option>
                     <option value="year-desc">{t.gallery.sort.yearDesc}</option>
@@ -106,23 +106,18 @@ export default function GalleryGrid({ artworks }: GalleryGridProps) {
             </div>
 
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
-                {visibleArtworks.map((artwork, index) => (
+                {visibleArtworks.map((artwork) => (
                     <Suspense key={artwork.id} fallback={<div className="aspect-[4/3] bg-gray-200 dark:bg-gray-700 rounded-lg animate-pulse" />}>
-                        <div
-                            className="animate-fade-in-up"
-                            style={{ animationDelay: `${Math.min(index * 50, 500)}ms` }}
-                        >
-                            <ArtworkCard artwork={artwork} />
-                        </div>
+                        <ArtworkCard artwork={artwork} />
                     </Suspense>
                 ))}
             </div>
 
             {visibleCount < sortedArtworks.length && (
-                <div className="text-center mt-8 animate-fade-in">
+                <div className="text-center mt-8">
                     <button
                         onClick={handleLoadMore}
-                        className="bg-blue-600 hover:bg-blue-700 text-white font-medium py-3 px-8 rounded-lg transition-all duration-300 hover:scale-105 hover:shadow-lg active:scale-95"
+                        className="bg-blue-600 hover:bg-blue-700 text-white font-medium py-2 px-6 rounded-lg transition-colors"
                     >
                         {t.gallery.loadMore}
                     </button>

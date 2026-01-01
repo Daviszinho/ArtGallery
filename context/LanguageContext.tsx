@@ -42,17 +42,6 @@ interface Translations {
         dimensions: string;
         by: string;
     };
-    share: {
-        share: string;
-        checkOut: string;
-        facebook: string;
-        twitter: string;
-        whatsapp: string;
-        linkedin: string;
-        email: string;
-        copyLink: string;
-        linkCopied: string;
-    };
 }
 
 const translations: Record<Language, Translations> = {
@@ -93,17 +82,6 @@ const translations: Record<Language, Translations> = {
             inquire: "Inquire to Purchase",
             dimensions: "Dimensions",
             by: "by"
-        },
-        share: {
-            share: "Share",
-            checkOut: "Check out this artwork",
-            facebook: "Share on Facebook",
-            twitter: "Share on Twitter",
-            whatsapp: "Share on WhatsApp",
-            linkedin: "Share on LinkedIn",
-            email: "Share via Email",
-            copyLink: "Copy link",
-            linkCopied: "Link copied to clipboard!"
         }
     },
     es: {
@@ -143,17 +121,6 @@ const translations: Record<Language, Translations> = {
             inquire: "Consultar compra",
             dimensions: "Dimensiones",
             by: "de"
-        },
-        share: {
-            share: "Compartir",
-            checkOut: "Mira esta obra",
-            facebook: "Compartir en Facebook",
-            twitter: "Compartir en Twitter",
-            whatsapp: "Compartir en WhatsApp",
-            linkedin: "Compartir en LinkedIn",
-            email: "Compartir por correo",
-            copyLink: "Copiar enlace",
-            linkCopied: "¡Enlace copiado al portapapeles!"
         }
     },
     pt: {
@@ -193,17 +160,6 @@ const translations: Record<Language, Translations> = {
             inquire: "Consultar compra",
             dimensions: "Dimensões",
             by: "de"
-        },
-        share: {
-            share: "Compartilhar",
-            checkOut: "Confira esta obra",
-            facebook: "Compartilhar no Facebook",
-            twitter: "Compartilhar no Twitter",
-            whatsapp: "Compartilhar no WhatsApp",
-            linkedin: "Compartilhar no LinkedIn",
-            email: "Compartilhar por e-mail",
-            copyLink: "Copiar link",
-            linkCopied: "Link copiado para a área de transferência!"
         }
     },
     fr: {
@@ -243,17 +199,6 @@ const translations: Record<Language, Translations> = {
             inquire: "Demande d'achat",
             dimensions: "Dimensions",
             by: "par"
-        },
-        share: {
-            share: "Partager",
-            checkOut: "Découvrez cette œuvre",
-            facebook: "Partager sur Facebook",
-            twitter: "Partager sur Twitter",
-            whatsapp: "Partager sur WhatsApp",
-            linkedin: "Partager sur LinkedIn",
-            email: "Partager par e-mail",
-            copyLink: "Copier le lien",
-            linkCopied: "Lien copié dans le presse-papiers !"
         }
     },
     it: {
@@ -293,17 +238,6 @@ const translations: Record<Language, Translations> = {
             inquire: "Richiedi acquisto",
             dimensions: "Dimensioni",
             by: "di"
-        },
-        share: {
-            share: "Condividi",
-            checkOut: "Guarda quest'opera",
-            facebook: "Condividi su Facebook",
-            twitter: "Condividi su Twitter",
-            whatsapp: "Condividi su WhatsApp",
-            linkedin: "Condividi su LinkedIn",
-            email: "Condividi via e-mail",
-            copyLink: "Copia link",
-            linkCopied: "Link copiato negli appunti!"
         }
     },
     de: {
@@ -343,17 +277,6 @@ const translations: Record<Language, Translations> = {
             inquire: "Kaufanfrage",
             dimensions: "Maße",
             by: "von"
-        },
-        share: {
-            share: "Teilen",
-            checkOut: "Schauen Sie sich dieses Kunstwerk an",
-            facebook: "Auf Facebook teilen",
-            twitter: "Auf Twitter teilen",
-            whatsapp: "Auf WhatsApp teilen",
-            linkedin: "Auf LinkedIn teilen",
-            email: "Per E-Mail teilen",
-            copyLink: "Link kopieren",
-            linkCopied: "Link in die Zwischenablage kopiert!"
         }
     }
 };

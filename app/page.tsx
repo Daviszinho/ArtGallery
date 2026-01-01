@@ -35,12 +35,12 @@ export default function Home() {
     <main className="min-h-screen bg-gray-50 dark:bg-gray-900">
       <div className="container mx-auto px-4 py-12">
         <header className="text-center mb-12">
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-serif font-bold text-gray-900 dark:text-white mb-6 tracking-tight animate-fade-in-down">
+          <h1 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-4">
             {t.header.title}
           </h1>
-          <div className="text-lg font-sans text-gray-700 dark:text-gray-300 max-w-3xl mx-auto space-y-4 text-justify leading-relaxed animate-fade-in-up animation-delay-200">
+          <div className="text-lg text-gray-600 dark:text-gray-300 max-w-3xl mx-auto space-y-4 text-justify">
             {t.header.subtitle.split(/\\n\\n|\n\n/).map((paragraph, index) => (
-              <p key={index} className="font-light">{paragraph}</p>
+              <p key={index}>{paragraph}</p>
             ))}
           </div>
         </header>
