@@ -535,6 +535,40 @@ export const artworks: Artwork[] = [
     year: 2021,
     dimensions: { height: 30, width: 30 },
     status: 'sold',
+  }, {
+    id: '30',
+    title: 'Conflicto cromático',
+    artist: 'Davis Peñaranda',
+    category: 'Oleo',
+    imageUrl: '/images/confilctocromatico.jpg',
+    description: {
+      es: 'A traves de colores primarios y secundarios, busqueda de la armonica en el minimalismo.',
+      en: 'Through primary and secondary colors, search for harmony in minimalism.',
+      pt: 'Atraves de cores primarias e secundarias, busca da harmonica no minimalismo.',
+      fr: 'A travers des couleurs primaires et secondaires, recherche de l\'harmonie dans le minimalisme.',
+      it: 'Attraverso colori primari e secondari, ricerca dell\'armonia nel minimalismo.',
+      de: 'Durch Primär- und Sekundärfarben wird Harmonie im Minimalismus gesucht.'
+    },
+    year: 2026,
+    dimensions: { height: 70, width: 100 },
+    status: 'available',
+  }, {
+    id: '31',
+    title: 'Flujo marmoleo',
+    artist: 'Davis Peñaranda',
+    category: 'Oleo',
+    imageUrl: '/images/flujomarmoleo.jpg',
+    description: {
+      es: 'Mediante claroscuros, se manifiestan diversos flujos turbulentos y armónicos.',
+      en: 'Through chiaroscuro, various turbulent and harmonic flows are manifested.',
+      pt: 'Atraves de claroscuros, manifestam-se diversos fluxos turbulentos e harmonicos.',
+      fr: 'A travers des clair-obscurs, divers flux turbulents et harmoniques se manifestent.',
+      it: 'Attraverso chiaroscuro, si manifestano diversi flussi turbolenti e armonici.',
+      de: 'Durch Hell-Dunkel werden verschiedene turbulente und harmonische Flüsse manifestiert.'
+    },
+    year: 2026,
+    dimensions: { height: 70, width: 100 },
+    status: 'available',
   }
 ];
 
